@@ -1682,6 +1682,7 @@ input:focus {
         width: 100vw;
         border-radius: 0;
         padding: 20px 25px;
+        height: unset;
         display: grid;
         grid-template-columns: 2fr 3fr;
         gap: 5%;
