@@ -1,0 +1,833 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+        rel="stylesheet"
+        href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
+    />
+    <script defer src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <script defer src="./script.js"></script>
+    <link rel="stylesheet" href="./styles.css">
+    <script defer src="./expander.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div class="cover"></div>
+    <header>
+        <div class="container">
+            <div class="header__inner">
+                <a href="./index.html">
+                    <img src="./media/logo.svg" alt="logo">
+                </a>
+                <nav class="header__navbar large" id="navbar">
+                    <ul class="header__navlist">
+                        <li class="header__navitem">
+                            <a href="#appart">
+                                апартаменты 
+                            </a>
+                        </li>
+                        <li class="header__navitem">
+                            <a href="#contacts">
+                                контакты
+                            </a>
+                        </li>
+                        <li class="header__navitem">
+                            <a href="#">
+                                +7 (978) 765-58-11
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="small">
+                    <div class="header__toggler toggler" target="navbar">
+                        <div class="active">
+                            <img src="./media/cross.svg" alt="">
+                        </div>
+                        <div class="disactive">
+                            <i class="line"></i>
+                            <i class="line"></i>
+                            <i class="line"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main class="stick">
+        <div class="swiper--gallery small" id="appart">
+            <a class="back" href="./index.html">
+                <img src="media/back.svg"/>
+            </a>
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="./media/studio1/main (1).jpg" alt="">
+                </div>
+                <div class="swiper-slide">
+                    <img src="./media/studio1/main (2).jpg" alt="">
+                </div>
+                <div class="swiper-slide">
+                    <img src="./media/studio1/main (3).jpg" alt="">
+                </div>
+                <div class="swiper-slide">
+                    <img src="./media/studio1/main (4).jpg" alt="">
+                </div>
+            </div>
+        </div>
+        <section class="preview" id="appart">
+            <div class="container">
+                <h1 class="card__name">
+                    Studio 1
+                </h1>
+                <p class="preview__address">
+                    г. Севастополь, ул. Пушкина
+                </p>
+                <div class="large">
+                    <ul class="preview__gallery" id="preview" limited max-items="6">
+                        <li><img src="./media/studio1/main (1).jpg" alt=""></li>
+                        <li><img src="./media/studio1/main (2).jpg" alt=""></li>
+                        <li><img src="./media/studio1/main (3).jpg" alt=""></li>
+                        <li><img src="./media/studio1/main (4).jpg" alt=""></li>
+                        <li><img src="./media/studio1/main (5).jpg" alt=""></li>
+                        <li><img src="./media/studio1/main (5).jpg" alt=""></li>
+                        <button class="preview__toggler toggler" target="preview">
+                            <div class="disactive">
+                                Показать все фото
+                            </div>
+                            <div class="active">
+                                Скрыть фото
+                            </div>
+                        </button>
+                    </ul>
+                </div>
+                <h2 class="preview__title">2-х комнатная квартира</h2>
+                <ul class="card__list">
+                    <li>2 гостя</li>
+                    <li>студия</li>
+                    <li>1 кровать</li>
+                    <li>1 ванная</li>
+                </ul>
+            </div>
+        </section>
+        <section class="details">
+            <div class="container">
+                <div class="details__inner">
+                    <div class="details__content">
+                        <p>
+                            Дизайнерские апартаменты с высокими потолками, полами
+                            из натурального дерева. Удобные двуспальные кровати
+                            и качественное постельное белье, в ванных комнатах – итальянская сантехника. Выход на собственный патио с газоном, где есть шезлонги и гамак
+                        </p>
+                        <div class="details__features">
+                            <h2 class="details__title">
+                                Какие удобства вас ждут
+                            </h2>
+                            <ul class="details__list" limited id="features" max-items="6">
+                                <li>Быстрый Wi-Fi</li>
+                                <li>Стиральная машина</li>
+                                <li>Постельное белье и полотенца</li>
+                                <li>Кофемашина, чайник</li>
+                                <li>Посудомоечная машина</li>
+                                <li>Телевизор</li>
+                            </ul>
+                            <button class="details__toggler toggler" target="features">
+                                <div class="disactive">
+                                   Показать все удобства
+                                </div>
+                                <div class="active">
+                                    Скрыть удобства
+                                </div>
+                            </button>
+                        </div>
+                    </div>
+                        <form class="search__form details__form" action="./orfering.html">
+                            <h2 class="search__price">
+                                <span class="popup__toggler hidden__toggler small" target="date"></span>
+                                <b><span class="large">от</span>1200₽</b>/сутки
+                            </h2>
+                            <div class="large">
+                                <div class="search__fields">
+                                    <div class="search__input">
+                                        
+                                        <div class="search__field popup__toggler" target="date">
+                                            <p>
+                                                Прибытие
+                                            </p>
+                                            <input type="hidden" value="17.04.2022">
+                                            <p class="search__under">Когда?</p>
+                                        </div>
+                                    </div>
+                                    <div class="search__input">
+                                        
+                                        <div class="search__field popup__toggler"  target="date">
+                                            <p>
+                                                Выезд
+                                            </p>
+                                            <input type="hidden" value="17.04.2022">
+                                            <p class="search__under">Когда?</p>
+                                        </div>
+                                        
+                                    </div>
+                                    <div class="search__input">
+                                        <div class="search__field popup__toggler" target="amount">
+                                            <p>
+                                                Количество гостей
+                                            </p>
+                                            <input type="hidden" value="17.04.2022">
+                                            <p class="search__under">Когда?</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="popup--large hidden" id="date">
+                                    <div class="small">
+                                        <div class="popup__closer--border">
+                                            <img src="./media/back.svg" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="popup__header">
+                                        <div class="popup__info large">
+                                            <h3>Выберите даты
+                                            </h3>
+                                            <p>
+                                                Минимальный срок проживания<br> 2 дня
+                                            </p>
+                                        </div>
+                                        <h2 class="popup__head small">
+                                            Ваша поездка
+                                        </h2>
+                                        <div class="popup__recap">
+                                                <div class="search__fields">
+                                                    <div class="search__input popup__toggler">
+                                                        <div class="search__field">
+                                                            <p>
+                                                                Прибытие
+                                                            </p>
+                                                            <input type="hidden" value="17.04.2022">
+                                                            <p class="search__main">17.04.2022</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="search__input">
+                                                        <div class="search__field">
+                                                            <p>
+                                                                Выезд
+                                                            </p>
+                                                            <input type="hidden" value="17.04.2022">
+                                                            <p class="search__main">17.04.2022</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="search__input small">
+                                                        
+                                                        <div class="search__field">
+                                                            <p>
+                                                                Количество гостей
+                                                            </p>
+                                                            <input type="hidden" value="17.04.2022">
+                                                            <p class="search__main">17.04.2022</p>
+                                                        </div>
+                                                        
+                                                    </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="popup__prices small">
+                                        <ul class="prices__list">
+                                            <li class="prices__item">
+                                                <h4 class="prices__name">
+                                                    Размещение
+                                                </h4>
+                                                <p class="prices__value">
+                                                    190 000₽
+                                                </p>
+                                            </li>
+                                            <li class="prices__item">
+                                                <h4 class="prices__name">
+                                                    Скидка за месяц
+                                                </h4>
+                                                <p class="prices__value sale">
+                                                    -76 000₽
+                                                </p>
+                                            </li>
+                                            <li class="prices__item">
+                                                <h4 class="prices__name">
+                                                    Итого
+                                                </h4>
+                                                <p class="prices__value">
+                                                    114 000₽
+                                                </p>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="large">
+                                        <div class="calendar">
+                                            <div class="calendar__month">
+                                                <div class="calendar__head">
+                                                    <img src="media/Union.svg" alt="" class="calendar__prev">
+                                                    март 2020
+                                                </div>
+                                                <div class="calendar__content">
+                                                        <ul class="calendar__week">
+                                                            <li>пн</li>
+                                                            <li>вт</li>
+                                                            <li>ср</li>
+                                                            <li>чт</li>
+                                                            <li>пт</li>
+                                                            <li>сб</li>
+                                                            <li>вс</li>
+                                                        </ul>
+                                                    <ul class="calendar__list">
+                                                        <li>1
+                                                            <span class="calendar__under">
+                                                                6000
+                                                            </span>
+                                                        </li>
+                                                        <li>2
+                                                            <span class="calendar__under">
+                                                                6000
+                                                            </span>
+                                                        </li>
+                                                        <li>3
+                                                            <span class="calendar__under">
+                                                                6000
+                                                            </span>
+                                                        </li>
+                                                        <li>4
+                                                            <span class="calendar__under">
+                                                                6000
+                                                            </span>
+                                                        </li>
+                                                        <li>5
+                                                            <span class="calendar__under">
+                                                                6000
+                                                            </span>
+                                                        </li>
+                                                        <li>6
+                                                            <span class="calendar__under">
+                                                                6000
+                                                            </span>
+                                                        </li>
+                                                        <li disabled>7
+                                                        </li>
+                                                        <li>8
+                                                            <span class="calendar__under">
+                                                                6000
+                                                            </span>
+                                                        </li>
+                                                        <li>9
+                                                            <span class="calendar__under">
+                                                                6000
+                                                            </span>
+                                                        </li>
+                                                        <li>10 <span class="calendar__under">
+                                                                6000
+                                                            </span></li>
+                                                        <li>11 <span class="calendar__under">
+                                                                6000
+                                                            </span></li>
+                                                        <li>12 <span class="calendar__under">
+                                                                6000
+                                                            </span></li>
+                                                        <li>13 <span class="calendar__under">
+                                                                6000
+                                                            </span></li>
+                                                        <li>14 <span class="calendar__under">
+                                                                6000
+                                                            </span></li>
+                                                        <li>15 <span class="calendar__under">
+                                                                6000
+                                                            </span></li>
+                                                        <li>16 <span class="calendar__under">
+                                                                6000
+                                                            </span></li>
+                                                        <li>17 <span class="calendar__under">
+                                                                6000
+                                                            </span></li>
+                                                        <li>18 <span class="calendar__under">
+                                                                6000
+                                                            </span></li>
+                                                        <li>19 <span class="calendar__under">
+                                                                6000
+                                                            </span></li>
+                                                        <li>20 <span class="calendar__under">
+                                                                6000
+                                                            </span></li>
+                                                        <li>21 <span class="calendar__under">
+                                                                6000
+                                                            </span></li>
+                                                        <li>22 <span class="calendar__under">
+                                                                6000
+                                                            </span></li>
+                                                        <li>23 <span class="calendar__under">
+                                                                6000
+                                                            </span></li>
+                                                        <li>24 <span class="calendar__under">
+                                                                6000
+                                                            </span></li>
+                                                        <li>25 <span class="calendar__under">
+                                                                6000
+                                                            </span></li>
+                                                        <li>26 <span class="calendar__under">
+                                                                6000
+                                                            </span></li>
+                                                        <li>27 <span class="calendar__under">
+                                                                6000
+                                                            </span></li>
+                                                        <li>28 <span class="calendar__under">
+                                                                6000
+                                                            </span></li>
+                                                        <li>29 <span class="calendar__under">
+                                                                6000
+                                                            </span></li>
+                                                        <li>30 <span class="calendar__under">
+                                                                6000
+                                                            </span></li>
+                                                        <li>31 <span class="calendar__under">
+                                                                6000
+                                                            </span></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="calendar__month">
+                                                <div class="calendar__head">
+                                                    март 2020
+                                                    <img src="media/Union-1.svg" alt="" class="calendar__next">
+                                                </div>
+                                                <div class="calendar__content">
+                                                        <ul class="calendar__week">
+                                                            <li>пн</li>
+                                                            <li>вт</li>
+                                                            <li>ср</li>
+                                                            <li>чт</li>
+                                                            <li>пт</li>
+                                                            <li>сб</li>
+                                                            <li>вс</li>
+                                                        </ul>
+                                                    <ul class="calendar__list">
+                                                        <li>1
+                                                            <span class="calendar__under">
+                                                                6000
+                                                            </span>
+                                                        </li>
+                                                        <li>2
+                                                            <span class="calendar__under">
+                                                                6000
+                                                            </span>
+                                                        </li>
+                                                        <li>3
+                                                            <span class="calendar__under">
+                                                                6000
+                                                            </span>
+                                                        </li>
+                                                        <li>4
+                                                            <span class="calendar__under">
+                                                                6000
+                                                            </span>
+                                                        </li>
+                                                        <li>5
+                                                            <span class="calendar__under">
+                                                                6000
+                                                            </span>
+                                                        </li>
+                                                        <li>6
+                                                            <span class="calendar__under">
+                                                                6000
+                                                            </span>
+                                                        </li>
+                                                        <li>7
+                                                            <span class="calendar__under">
+                                                                6000
+                                                            </span>
+                                                        </li>
+                                                        <li>8
+                                                            <span class="calendar__under">
+                                                                6000
+                                                            </span>
+                                                        </li>
+                                                        <li>9
+                                                            <span class="calendar__under">
+                                                                6000
+                                                            </span>
+                                                        </li>
+                                                        <li>10 <span class="calendar__under">
+                                                                6000
+                                                            </span></li>
+                                                        <li>11 <span class="calendar__under">
+                                                                6000
+                                                            </span></li>
+                                                        <li>12 <span class="calendar__under">
+                                                                6000
+                                                            </span></li>
+                                                        <li>13 <span class="calendar__under">
+                                                                6000
+                                                            </span></li>
+                                                        <li>14 <span class="calendar__under">
+                                                                6000
+                                                            </span></li>
+                                                        <li>15 <span class="calendar__under">
+                                                                6000
+                                                            </span></li>
+                                                        <li>16 <span class="calendar__under">
+                                                                6000
+                                                            </span></li>
+                                                        <li class="selected">17 <span class="calendar__under">
+                                                                6000
+                                                            </span></li>
+                                                        <li>18 <span class="calendar__under">
+                                                                6000
+                                                            </span></li>
+                                                        <li class="begin">19 <span class="calendar__under">
+                                                                6000
+                                                            </span></li>
+                                                        <li class="between">20 <span class="calendar__under">
+                                                                6000
+                                                            </span></li>
+                                                        <li class="between">21 <span class="calendar__under">
+                                                                6000
+                                                            </span></li>
+                                                        <li class="end">22 <span class="calendar__under">
+                                                                6000
+                                                            </span></li>
+                                                        <li>23 <span class="calendar__under">
+                                                                6000
+                                                            </span></li>
+                                                        <li>24 <span class="calendar__under">
+                                                                6000
+                                                            </span></li>
+                                                        <li>25 <span class="calendar__under">
+                                                                6000
+                                                            </span></li>
+                                                        <li>26 <span class="calendar__under">
+                                                                6000
+                                                            </span></li>
+                                                        <li>27 <span class="calendar__under">
+                                                                6000
+                                                            </span></li>
+                                                        <li>28 <span class="calendar__under">
+                                                                6000
+                                                            </span></li>
+                                                        <li>29 <span class="calendar__under">
+                                                                6000
+                                                            </span></li>
+                                                        <li>30 <span class="calendar__under">
+                                                                6000
+                                                            </span></li>
+                                                        <li>31 <span class="calendar__under">
+                                                                6000
+                                                            </span></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="popup__buyer small">
+                                        <button class="details__button">
+                                            Забронировать
+                                        </button>
+                                    </div>
+                            </div>
+                            <div class="popup hidden" id="amount">
+                                <img src="./media/back.svg" alt="" class="popup__closer small">
+                                
+                                <h2 class="popup__head">
+                                    Какие даты вам нужны?
+                                    <span class="title__under">
+                                        Гибкие даты
+                                    </span>
+                                </h2>
+                                <div class="amount__container">
+                                    <div class="amount__field">
+                                        <div class="amount__category">
+                                            <h3 class="category__main">Взрослые</h3>
+                                            <p class="category__under">
+                                                От 13 лет
+                                            </p>
+                                        </div>
+                                        <div class="amount__counter">
+                                            <span class="amount__changer">
+                                                <i>-</i>
+                                            </span>
+                                            <input type="text" readonly value="1">
+                                            <span class="amount__changer">
+                                                <i>+</i>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="amount__field">
+                                        <div class="amount__category">
+                                            <h3 class="category__main">Взрослые</h3>
+                                            <p class="category__under">
+                                                От 13 лет
+                                            </p>
+                                        </div>
+                                        <div class="amount__counter">
+                                            <span class="amount__changer">
+                                                <i>-</i>
+                                            </span>
+                                            <input type="text" readonly value="1">
+                                            <span class="amount__changer">
+                                                <i>+</i>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="amount__field">
+                                        <div class="amount__category">
+                                            <h3 class="category__main">Взрослые</h3>
+                                            <p class="category__under">
+                                                От 13 лет
+                                            </p>
+                                        </div>
+                                        <div class="amount__counter">
+                                            <span class="amount__changer disabled">
+                                                <i>-</i>
+                                            </span>
+                                            <input type="text" readonly value="1">
+                                            <span class="amount__changer">
+                                                <i>+</i>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="small">
+                                    <div class="popup__controll">
+                                        <a href="#">
+                                            Пропустить
+                                        </a>
+                                        <button>
+                                            Далее
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <button type="submit" class="details__button">
+                                Проверить свободные даты
+                            </button>
+                        </form>
+                </div>
+            </div>
+        </section>
+        <section class="comments">
+            <div class="container">
+                <div class="comments__inner">
+                    <div class="comments__header">
+                        <h2 class="comments__count">
+                            4 отзыва
+                        </h2>
+                        <div class="large">
+                            <div class="comments__navigation">
+                                <img src="./media/Union.svg" alt="" class="comments__left">
+                                <img src="./media/Union-1.svg" alt="" class="comments__right">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper--nav">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="comment__container">
+                                    <h3 class="comment_author">
+                                        Антон
+                                    </h3>
+                                    <p class="comment_body">
+                                        Очень хорошая квартирка, где есть все необходимое. Отличная локация, прекрасная коммуникация с хозяйкой!
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="comment__container">
+                                    <h3 class="comment_author">
+                                        Антон
+                                    </h3>
+                                    <p class="comment_body">
+                                        Очень хорошая квартирка, где есть все необходимое. Отличная локация, прекрасная коммуникация с хозяйкой!
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="comment__container">
+                                    <h3 class="comment_author">
+                                        Антон
+                                    </h3>
+                                    <p class="comment_body">
+                                        Очень хорошая квартирка, где есть все необходимое. Отличная локация, прекрасная коммуникация с хозяйкой!
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="comment__container">
+                                    <h3 class="comment_author">
+                                        Антон
+                                    </h3>
+                                    <p class="comment_body">
+                                        Очень хорошая квартирка, где есть все необходимое. Отличная локация, прекрасная коммуникация с хозяйкой!
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="location">
+            <div class="container">
+                <div class="location__inner">
+                    <h2 class="location__title">
+                        Где вы будете
+                    </h2>
+                    <p class="preview__address">
+                        г. Севастополь, ул. Пушкина
+                    </p>
+                    <img src="./media//studio1/cart.jpg" alt="location">
+                </div>
+            </div>
+        </section>
+        <section class="additional">
+            <div class="container">
+                <div class="additional__inner">
+                    <h2 class="additional__title">
+                        Важная информация
+                    </h2>
+                    <div class="swiper small">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide rules__item">
+                                    <p>
+                                        Въезд после 15:00
+                                    </p>
+                                    <img src="./media/clock.svg" alt="">
+                
+                            </div>
+                            <div class="swiper-slide rules__item">
+    
+                                    <p>
+                                        Выезд до 12:00
+                                    </p>
+                                    <img src="./media/clock.svg" alt="">
+                    
+                            </div>
+                            <div class="swiper-slide rules__item">
+    
+                                    <p>
+                                        При заселении оплата залоговой суммы в размере стоимости 1 ночи
+                                    </p>
+                                    <img src="./media/clock.svg" alt="">
+              
+                            </div>
+                            <div class="swiper-slide rules__item">
+    
+                                    <p>
+                                        Размещение животных возможно по запросу
+                                    </p>
+                                    <img src="./media/clock.svg" alt="">
+          
+                            </div>
+                            <div class="swiper-slide rules__item">
+        
+                                    <p>
+                                        Курить строго запрещено
+                                    </p>
+                                    <img src="./media/clock.svg" alt="">
+           
+                            </div>
+                            <div class="swiper-slide rules__item">
+                                    <p>
+                                        Не шуметь после 23:00
+                                    </p>
+                                    <img src="./media/clock.svg" alt="">
+                            </div>
+                            <div class="swiper-slide rules__item">
+    
+                                    <p>
+                                        Не проводить вечеринки
+                                    </p>
+                                    <img src="./media/clock.svg" alt="">
+    
+                            </div>
+                            <div class="swiper-slide rules__item">
+                              
+                                    <p>
+                                        Клининг не менее, чем раз в неделю, оплата отдельно
+                                    </p>
+                                    <img src="./media/clock.svg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="large">
+                        <div class="rules__inner">
+                            <div class="rules__item">
+                                <p>
+                                    Въезд после 15:00
+                                </p>
+                                <img src="./media/clock.svg" alt="">
+                            </div>
+                            <div class="rules__item">
+                                <p>
+                                    Выезд до 12:00
+                                </p>
+                                <img src="./media/fire.svg" alt="">
+                            </div>
+                            <div class="rules__item">
+                                <p>
+                                    При заселении оплата залоговой суммы в размере стоимости 1 ночи
+                                </p>
+                                <img src="./media/fire.svg" alt="">
+                            </div>
+                            <div class="rules__item">
+                                <p>
+                                    Размещение животных возможно по запросу
+                                </p>
+                                <img src="./media/party.svg" alt="">
+                            </div>
+                            <div class="rules__item">
+                                <p>
+                                    Курить строго запрещено
+                                </p>
+                                <img src="./media/sparkles-2.svg" alt="">
+                            </div>
+                            <div class="rules__item">
+                                <p>
+                                    Не шуметь после 23:00
+                                </p>
+                                <img src="./media/sparkles-2.svg" alt="">
+                            </div>
+                            <div class="rules__item">
+                                <p>
+                                    Не проводить вечеринки
+                                </p>
+                                <img src="./media/party.svg" alt="">
+                            </div>
+                            <div class="rules__item">
+                                <p>
+                                    Клининг не менее, чем раз в неделю, оплата отдельно
+                                </p>
+                                <img src="./media/fire.svg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer>
+            <div class="footer__underline">
+                <div class="container">
+                    <ul class="footer__info">
+                        <li>
+                            © 2022 neorental.
+                        </li>
+                        <li>
+                            <a href="#">
+                                Конфиденциальность
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">Реквизиты компании</a>
+                            
+                        </li>
+                        <li><a href="#">+7 (978) 765-58-11</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+    </main>
+</body>
+</html>
