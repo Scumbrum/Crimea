@@ -21,7 +21,7 @@
 @font-face {
     font-family: 'Futura PT Book';
     src: url('./fonts/FuturaPT-Book.eot');
-    src: url('FuturaPT-Book.eot') format('embedded-opentype'),
+    src: url('FuturaPT-Book.ttf') format('embedded-opentype'),
     url('./fonts/FuturaPT-Book.woff') format('woff'),
     url('./fonts/FuturaPT-Book.ttf') format('truetype');
     font-weight: lighter;
