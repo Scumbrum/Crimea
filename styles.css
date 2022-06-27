@@ -180,6 +180,7 @@ input:focus {
 .header__navitem a {
     text-decoration: none;
     width: max-content;
+    display: block;
     font-size: calc(1.2 * var(--size-index));
     color: var(--font-main);
 }
