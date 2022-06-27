@@ -181,7 +181,7 @@ input:focus {
     text-decoration: none;
     width: max-content;
     display: block;
-    font-size: calc(1.2 * var(--size-index));
+    font-size: calc(1.1 * var(--size-index));
     color: var(--font-main);
 }
 
@@ -255,7 +255,7 @@ input:focus {
 
 .search__input p {
     font-weight: bold;
-    font-size: calc(1 * var(--size-index));
+    font-size: calc(0.8 * var(--size-index));
 }
 
 .search__input:last-child {
@@ -301,7 +301,7 @@ input:focus {
 .card__name {
     color: var(--secondary);
     text-transform: uppercase;
-    font-size: calc(1.5 * var(--size-index));
+    font-size: calc(1.2 * var(--size-index));
 }
 
 .card__list {
@@ -552,12 +552,12 @@ input:focus {
 
 .preview__title {
     margin: 24px 0 8px;
-    font-size: calc(1.8 * var(--size-index));
+    font-size: calc(1.7 * var(--size-index));
 }
 
 .preview .card__list li {
     color: var(--font-main);
-    font-size: calc(1.2 * var(--size-index));
+    font-size: calc(1.1 * var(--size-index));
     margin-right: 15px;
 }
 
@@ -728,7 +728,7 @@ input:focus {
 }
 
 .comments__count, .location__title, .additional__title {
-    font-size: calc(1.8 * var(--size-index));
+    font-size: calc(1.7 * var(--size-index));
 }
 
 .comments__navigation {
@@ -764,9 +764,14 @@ input:focus {
     border-bottom: 1px solid var(--border);
 }
 
-.location__inner img {
+.location__inner .preview__cart{
+    overflow: hidden;
+}
+
+.location__inner iframe {
     width: 100%;
-    height: calc(20 * var(--size-index));
+    height: calc(20 * var(--size-index) + 150px);
+    margin-top: -150px;
     border-radius: calc(0.5 * var(--size-index));
 }
 
@@ -780,8 +785,8 @@ input:focus {
 
 
 .ordering__head img{
-    width: calc(1.2 * var(--size-index));
-    height: calc(1.2 * var(--size-index));
+    width: calc(0.8 * var(--size-index));
+    height: calc(0.8 * var(--size-index));
     margin-right: 30px;
 }
 
@@ -814,7 +819,7 @@ input:focus {
 }
 
 .ordering__value * {
-    font-size: calc(1.2 * var(--size-index));
+    font-size: calc(1.1 * var(--size-index));
 }
 
 .ordering__under {
@@ -824,7 +829,7 @@ input:focus {
 
 .ordering__editor {
     color: var(--font-main);
-    font-size: calc(1.2 * var(--size-index));
+    font-size: calc(1.1 * var(--size-index));
     text-decoration: underline;
 }
 
@@ -916,13 +921,13 @@ input:focus {
 }
 
 .item__description {
-    font-size: calc(1 * var(--size-index));
+    font-size: calc(0.8 * var(--size-index));
     color: var(--other);
 }
 
 .item__name {
     font-weight: lighter;
-    font-size: calc(1.5 * var(--size-index));
+    font-size: calc(1.1 * var(--size-index));
 }
 
 .item {
@@ -1486,6 +1491,14 @@ input:focus {
         overflow: hidden;
     }
 
+    h2 {
+        font-size: calc(2 * var(--size-index));
+    }
+
+    h3 {
+        font-size: calc(1.2 * var(--size-index));
+    }
+
     .header__inner img {
         object-fit: fill;
     }
@@ -1516,7 +1529,7 @@ input:focus {
     }
 
     .header__navitem, .header__navitem a {
-        font-size: calc(1.5 * var(--size-index));
+        font-size: calc(1.2 * var(--size-index));
     }
 
     .header__navitem a {
@@ -1528,7 +1541,7 @@ input:focus {
     }
 
     .search__title, .search__title * {
-        font-size: calc(2 * var(--size-index))
+        font-size: calc(1.4 * var(--size-index))
     }
 
     .search__form {
@@ -1567,6 +1580,22 @@ input:focus {
 
     .rules {
         margin-top: 150px;
+    }
+
+    .card__list li {
+        font-size: calc(0.7 * var(--size-index));
+    }
+
+    .card__price b, .card__price {
+        font-size: calc(1 * var(--size-index));
+    }
+
+    .about__description {
+        font-size: calc(0.9 * var(--size-index));
+    }
+
+    .contact__description p, .contact__subtitle {
+        font-size: calc(1 * var(--size-index));
     }
 
     .footer__info {
@@ -1627,7 +1656,15 @@ input:focus {
     .preview .card__name {
         margin-top: 15px;
     }
+
+    .preview .card__list li {
+        font-size: calc(0.9 * var(--size-index));
+    }
     
+    .details__content p {
+        font-size: calc(0.9 * var(--size-index));
+    }
+
     .preview .preview__address {
         padding-bottom: 40px;
         margin-bottom: 0;
@@ -1636,6 +1673,7 @@ input:focus {
 
     .preview__title{
         margin-top: 15px;
+        font-size: calc(1.2 * var(--size-index));
     }
 
     .stick {
@@ -1687,7 +1725,7 @@ input:focus {
     }
 
     .ordering__head {
-        font-size: calc(1.5 * var(--size-index));
+        font-size: calc(1 * var(--size-index));
     }
 
     .search__form {
@@ -1728,6 +1766,10 @@ input:focus {
         border-top: 1px solid var(--border);
     }
 
+    .details__title {
+        font-size: calc(1.2 * var(--size-index));
+    }
+
     .details__form .search__price {
         font-size: calc(1.2 * var(--size-index));
     }
@@ -1754,13 +1796,40 @@ input:focus {
         display: block;
     }
 
+    .details__list li {
+        font-size: calc(0.9 * var(--size-index));
+    }
     
     .swiper--category .swiper-slide{
         width: fit-content;
     }
 
+    .comments__count, .location__title, .additional__title {
+        font-size: calc(1.2 * var(--size-index));
+    }
+
+    .comment_author {
+        font-size: calc(1.3 * var(--size-index));
+    }
+
+    .comment_body {
+        font-size: calc(1 * var(--size-index));
+    }
+
+    .rules__item p {
+        font-size: calc(1.2 * var(--size-index)); 
+    }
+
     .success__details--adapt {
         grid-template-columns: 1fr;
+    }
+
+    .prices__name {
+        font-size: calc(1 * var(--size-index));
+    }
+
+    .prices__value {
+        font-size: calc(1 * var(--size-index));
     }
 
     .payment {
@@ -1768,11 +1837,18 @@ input:focus {
     }
 
     .success__title {
-        font-size: calc(1.2 * var(--size-index));
+        font-size: calc(1 * var(--size-index));
+        text-align: center;
     }
 
-    .failure__title, .failure__button {
+    .failure__title {
         width: 100%;
+        font-size: calc(1.4 * var(--size-index));
+    }
+
+    .failure__button {
+        width: 100%;
+        font-size: calc(1.2 * var(--size-index));
     }
     
     .amount__container {
