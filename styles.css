@@ -21,7 +21,7 @@
 @font-face {
     font-family: 'Futura PT Book';
     src: url('./fonts/FuturaPT-Book.eot');
-    src: url('FuturaPT-Book.eot?#iefix') format('embedded-opentype'),
+    src: url('FuturaPT-Book.eot') format('embedded-opentype'),
     url('./fonts/FuturaPT-Book.woff') format('woff'),
     url('./fonts/FuturaPT-Book.ttf') format('truetype');
     font-weight: lighter;
@@ -64,7 +64,7 @@ main {
 }
 
 h2 {
-    font-size: calc(2 * var(--size-index));
+    font-size: calc(2.41 * var(--size-index));
 }
 
 h3 {
@@ -112,7 +112,17 @@ input:focus {
 }
 
 .header__toggler{
-    width: calc(3 * var(--size-index));
+    width: calc(2 * var(--size-index));
+    height: calc(1 * var(--size-index));
+}
+
+.header__toggler.active {
+    width: calc(1.5 * var(--size-index));
+    height: calc(1.5 * var(--size-index));
+}
+
+.header__toggler.active img {
+    width: calc(1.5 * var(--size-index));
     height: calc(1.5 * var(--size-index));
 }
 
@@ -122,10 +132,7 @@ input:focus {
     justify-content: space-between;
 }
 
-.header__toggler img {
-    width: calc(1.5 * var(--size-index));
-    height: calc(1.5 * var(--size-index));
-}
+
 
 .toggler {
     cursor: pointer;
@@ -141,7 +148,7 @@ input:focus {
 
 .line {
     display: block;
-    height: 5px;
+    height: 3px;
     width: 100%;
     background-color: var(--font-main);
 }
@@ -172,17 +179,17 @@ input:focus {
     color: var(--font-main);
 }
 
-.search__title {
+.search__title, .search__title * {
     font-weight: lighter;
-    margin: 32px 0 24px;
+    margin: 0 0 24px;
     text-align: center;
     font-size: calc(2.5 * var(--size-index));
-    font-style: italic;
     text-transform: uppercase;
 }
 
 .search__form {
     position: relative;
+    height: fit-content;
     display: flex;
     margin: 0 auto;
     width: calc(35 * var(--size-index));
@@ -346,7 +353,6 @@ input:focus {
 }
 
 .about__title {
-    font-size: calc(2 * var(--size-index));
     font-weight: lighter;
     padding-bottom: 20px;
 }
@@ -406,7 +412,7 @@ input:focus {
 }
 
 .rules__inner {
-    margin-top: 85px;
+    margin-top: 64px;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: calc(2 * var(--size-index));
@@ -414,12 +420,14 @@ input:focus {
 
 .rules__item {
     position: relative;
-    padding: 20px 20px 60px;
+    padding: 20px 15px 32px;
     box-shadow: 2px 6px 20px rgba(12, 27, 41, 0.08);
     border-radius: calc(0.5 * var(--size-index));
 }
 
 .rules__item img {
+    width: 34px;
+    height: 34px;
     position: absolute;
     bottom: 10px;
     right: 10px;
@@ -430,15 +438,28 @@ input:focus {
 }
 
 .footer__main {
+    overflow: hidden;
+    position: relative;
     padding: 80px 0;
-    background-image: url("./media/footer-bg.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: right;
     min-height: calc(30 * var(--size-index));
 }
 
+.footer__main iframe {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: calc(100% + 150px);
+    margin-top: -150px;
+}
+
 .contact {
+    position: relative;
+    z-index: 2;
     background-color: var(--background);
     border-radius: calc(0.5 * var(--size-index));
     padding: 25px 45px;
@@ -576,7 +597,11 @@ input:focus {
     margin-top: 30px;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 5%;
+    column-gap: calc(1.2 * var(--size-index));
+}
+
+.details__list[limited] li:nth-child(n + 7) {
+    display: none;
 }
 
 .details__list li {
@@ -617,7 +642,7 @@ input:focus {
     flex-direction: column;
     width: 100%;
     padding: 30px;
-    padding-bottom: 25px;
+    padding-bottom: 32px;
 }
 
 .details__form button {
@@ -628,7 +653,7 @@ input:focus {
     padding: 16px;
     transform: unset;
     color: var(--background);
-    font-size: calc(1.2 * var(--size-index));
+    font-size: calc(1 * var(--size-index));
 }
 
 .search__price  {
@@ -735,7 +760,6 @@ input:focus {
 .location__inner img {
     width: 100%;
     height: calc(20 * var(--size-index));
-    object-position: top right;
     border-radius: calc(0.5 * var(--size-index));
 }
 
@@ -886,6 +910,7 @@ input:focus {
 
 .item__description {
     font-size: calc(1 * var(--size-index));
+    color: var(--other);
 }
 
 .item__name {
@@ -1454,6 +1479,10 @@ input:focus {
         overflow: hidden;
     }
 
+    .header__inner img {
+        object-fit: fill;
+    }
+
     .container--adapt {
         padding: 0 0 0 15px;
     }
@@ -1491,7 +1520,7 @@ input:focus {
         margin-top: 40px;
     }
 
-    .search__title {
+    .search__title, .search__title * {
         font-size: calc(2 * var(--size-index))
     }
 
@@ -1681,7 +1710,7 @@ input:focus {
         left: 0;
         width: 100vw;
         border-radius: 0;
-        padding: 20px 25px;
+        padding: 10px 13px;
         height: unset;
         display: grid;
         grid-template-columns: 2fr 3fr;
@@ -1690,6 +1719,10 @@ input:focus {
         z-index:2;
         box-shadow: 2px -4px 20px rgba(12, 27, 41, 0.08);
         border-top: 1px solid var(--border);
+    }
+
+    .details__form .search__price {
+        font-size: calc(1.2 * var(--size-index));
     }
 
     .search__price b{
