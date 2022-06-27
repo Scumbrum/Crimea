@@ -460,7 +460,7 @@ input:focus {
     top: 0;
     right: 0;
     left: 0;
-    width: 100%;
+    width: 100vw;
     height: calc(100% + 150px);
     margin-top: -150px;
 }
