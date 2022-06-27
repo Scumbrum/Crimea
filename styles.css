@@ -768,7 +768,6 @@ input:focus {
 }
 
 .location__inner .preview__cart{
-    position: relative;
     border-radius: calc(0.5 * var(--size-index));
     width: 100%;
     overflow: hidden;
