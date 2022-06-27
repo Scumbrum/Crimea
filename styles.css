@@ -462,6 +462,8 @@ input:focus {
     right: 0;
     transform: none;
     left: 0;
+    display: block;
+    width: 100%;
     height: calc(100% + 150px);
     margin-top: -150px;
 }
