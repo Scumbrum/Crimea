@@ -155,6 +155,7 @@ input:focus {
 
 .header__inner img {
     width: calc(14 * var(--size-index));
+    object-fit: fill;
 }
 
 .header__inner a {
@@ -443,6 +444,7 @@ input:focus {
 }
 
 .footer__main {
+    width: 100%;
     overflow: hidden;
     position: relative;
     padding: 80px 0;
