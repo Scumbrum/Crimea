@@ -175,7 +175,6 @@ input:focus {
 
 .header__navitem {
     cursor: pointer;
-    width: max-content;
 }
 
 .header__navitem a {
