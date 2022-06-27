@@ -458,6 +458,7 @@ input:focus {
     position: absolute;
     z-index: 1;
     top: 0;
+    right: 0;
     left: 0;
     width: 100%;
     height: calc(100% + 150px);
@@ -621,6 +622,7 @@ input:focus {
     margin-top: 25px;
     padding: 16px 32px;
     display: flex;
+    color: var(--font-main);
     justify-content: center;
     background-color: var(--background);
     box-shadow: 2px 6px 20px rgba(12, 27, 41, 0.08);
@@ -765,6 +767,9 @@ input:focus {
 }
 
 .location__inner .preview__cart{
+    position: relative;
+    border-radius: calc(0.5 * var(--size-index));
+    width: 100%;
     overflow: hidden;
 }
 
@@ -772,7 +777,7 @@ input:focus {
     width: 100%;
     height: calc(20 * var(--size-index) + 150px);
     margin-top: -150px;
-    border-radius: calc(0.5 * var(--size-index));
+
 }
 
 .additional .rules__inner {
@@ -841,6 +846,7 @@ input:focus {
 }
 
 .ordering__field, .ordering__field--radio {
+    cursor: pointer;
     padding: 16px 24px;
     border-bottom: 1px solid var(--border);
 }
