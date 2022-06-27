@@ -460,6 +460,7 @@ input:focus {
     z-index: 1;
     top: 0;
     right: 0;
+    transform: none;
     left: 0;
     width: 100vw;
     height: calc(100% + 150px);
