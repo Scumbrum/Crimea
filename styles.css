@@ -165,7 +165,6 @@ input:focus {
     list-style: none;
     display: grid;
     grid-template-columns: repeat(3, fit-content(1px));
-    gap: calc(2 * var(--size-index));
 }
 
 .header__navitem {
