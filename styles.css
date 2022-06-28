@@ -455,17 +455,14 @@ input:focus {
     min-height: calc(30 * var(--size-index));
 }
 
-.footer__main iframe {
+.footer__main .cart {
     position: absolute;
     z-index: 1;
     top: 0;
     right: 0;
     transform: none;
     left: 0;
-    display: block;
-    width: 100%;
-    height: calc(100% + 150px);
-    margin-top: -150px;
+    height: 100%;
 }
 
 .contact {
@@ -775,10 +772,9 @@ input:focus {
     overflow: hidden;
 }
 
-.location__inner iframe {
+.location__inner .cart {
     width: 100%;
-    height: calc(20 * var(--size-index) + 150px);
-    margin-top: -150px;
+    height: calc(20 * var(--size-index));
 
 }
 
